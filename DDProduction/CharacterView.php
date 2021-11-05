@@ -106,7 +106,7 @@ if ( mysqli_connect_errno() ) {
     'Intelligence' => 'Intelligence',
     'Wisdom' => 'Wisdom',
     'Charisma' => 'Charisma'
-  )
+  );
 
 
 
