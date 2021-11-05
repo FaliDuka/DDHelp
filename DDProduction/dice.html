@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>Character Creation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./Charactercreation.css">
+		
+
+    </head>
+<body>
+<link href="dicestyle.css" rel="stylesheet" type="text/css">
+
+<header class="header-area overlay">
+    <nav class="navbar navbar-expand-md navbar-dark">
+		<div class="container">
+			</a><img alt="D&D Logo" width= "60" height="60" style ="vertical-align:bottom" class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://cdn.shopify.com/s/files/1/0890/1750/files/full_colorno_txt_no_flames_9955d095-d56c-4bfe-905f-d54071c4d4da_600x.png"><a href="homepage.html" class="navbar-brand">D&D Helper</a>
+			
+			<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+			</button>
+			
+			<div id="main-nav" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li><a href="homepage.php" class="nav-item nav-link active">Home</a></li>
+					<li class="dropdown"> 
+						<a href="Charactercreation.html" class="nav-item nav-link" data-toggle="dropdown">Character Sheet</a>
+						<div class="dropdown-menu">
+							<a href="#" class="View Character">Dropdown Item 1</a>
+						</div>
+					<li><a href="CharacterView.php" class="nav-item nav-link">View Character</a></li>
+					<li><a href="logout.php" class="nav-item nav-link">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    
+    <br>
+    </br>
+</header>
+
+  <div class="container">
+    <div class="results-box">
+      <span id="results">1</span>
+    </div>
+
+    <div class="dice-container">
+      <button class="btn-die" id="d4" onclick="rollD4()">d4</button>
+
+      <button class="btn-die" id="d6" onclick="rollD6()">d6</button>
+
+      <button class="btn-die" id="d8" onclick="rollD8()">d8</button>
+
+      <button class="btn-die" id="d10" onclick="rollD10()">d10</button>
+
+      <button class="btn-die" id="d12" onclick="rollD12()">d12</button>
+
+      <button class="btn-die" id="d20" onclick="rollD20()">d20</button>
+    </div>
+
+    <div class="multiplier-container">
+      <div class="mulitplier-box">
+        <p>Number of Dice</p>
+        <input class="mult-input" id="mult-input" type="number" name="multiplier" value="1" min="1" max="10">
+      </div>
+    </div>
+  </div>
+
+  <script src="dicescript.js"></script>
+</body>
+</html>

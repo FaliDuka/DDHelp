@@ -1,0 +1,152 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: homepage.php');
+	exit;
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>Character Creation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./Charactercreation.css">
+
+    </head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="header-area overlay">
+    <nav class="navbar navbar-expand-md navbar-dark">
+		<div class="container">
+			</a><img alt="D&D Logo" width= "60" height="60" style ="vertical-align:bottom" class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://cdn.shopify.com/s/files/1/0890/1750/files/full_colorno_txt_no_flames_9955d095-d56c-4bfe-905f-d54071c4d4da_600x.png"><a href="homepage.php" class="navbar-brand">D&D Helper</a>
+			
+			<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+			</button>
+			
+			<div id="main-nav" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li><a href="homepage.php" class="nav-item nav-link active">Home</a></li>
+					<li class="dropdown">
+						<a href="Charactercreation.html" class="nav-item nav-link" data-toggle="dropdown">Character Sheet</a>
+					<li><a href="CharacterView.php" class="nav-item nav-link">View Character</a></li>
+					<a href="dice.html" class="nav-item nav-link" data-toggle="dropdown">Dice</a>
+					<li><a href="logout.php" class="nav-item nav-link">Logout</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+    
+    <br>
+    </br>
+		<div class="register">
+        
+            
+        <br>
+        </br>
+			<h1 align= "center">DnD Helper+ Character creation</h1>
+			<form action="Charactercreation.php" method="post" autocomplete="off">
+	<p>
+    
+    <ul>	
+			
+	 Character name <input type="text" name="Chname" placeholder="Bob" size="20" maxlength="50"/>
+    <br/>
+	<!--
+	 Race <input type="text" name="Race" size="20" maxlength="50"/>
+    <br/>
+	 Alignment <input type="text" name="Alignment" size="20" maxlength="50"/>
+    <br/>
+	!-->
+    Acrobatics <input type="text" name="Acrobatics" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	AnimalHandling <input type="text" name="animalHandling" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Arcana <input type="text" name="Arcana" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Athletics <input type="text" name="Athletics" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Deception <input type="text" name="Deception" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	History <input type="text" name="History" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Insight <input type="text" name="Insight" placeholder="Yes/No" ize="10" maxlength="500"/>
+<br>
+	Intimidation <input type="text" name="Intimidation" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Investigation <input type="text" name="Investigation" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Medicine <input type="text" name="Medicine" size="10" placeholder="Yes/No" maxlength="500"/>  
+<br>
+	Nature<input type="text" name="Nature" size="10" placeholder="Yes/No" maxlength="500"/>
+<br>
+	Perception <input type="text" name="Perception" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Persuation <input type="text" name="Persuation" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Religion<input type="text" name="Religion" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Sleightofhand <input type="text" name="Sleightofhand" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Stealth <input type="text" name="stealth" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+	Survival <input type="text" name="Survival" placeholder="Yes/No" size="10" maxlength="500"/>
+<br>
+</ul>
+
+<ol>
+    Strength <input type="text" name="Strength" placeholder="10" size="10" maxlength="500"/>
+    
+    Dexterity <input type="text" name="Dexterity" placeholder="10" size="10" maxlength="500"/>
+    
+    Constitution <input type="text" name="Constitution" placeholder="10" size="10" maxlength="500"/>
+    
+	Intelligence <input type="text" name="Intelligence" placeholder="10" size="10" maxlength="500"/>
+    
+	Wisdom <input type="text" name="Wisdom" placeholder="10" size="10" maxlength="500"/>
+    
+	Charisma <input type="text" name="Charisma" placeholder="10" size="10" maxlength="500"/>
+</ol>	
+	
+	 Level<input type="text" name="lvlE" placeholder="1" size="20" maxlength="50"/>
+    <br/>
+	Hit Points<input type="text" name="Hit" placeholder="20" size="20" maxlength="50"/> 
+    <br/>
+	Throw <input type="text" name="Throws" placeholder="1" size="20" maxlength="50"/>
+    <br/>
+	 Initiative<input type="text" name="Initiative" placeholder="1" size="20" maxlength="50"/>
+    <br/>
+	Speed <input type="text" name="Speed" placeholder="1" size="20" maxlength="50"/>
+    <br/>
+	 Inspiration<input type="text" name="Inspir" placeholder="1" size="20" maxlength="50"/>
+    <br/>
+	Proficiency Bonus <input type="text" name="PB" placeholder="1" size="20" maxlength="50"/>
+    <br/>
+	 Passive Wisdom<input type="text" name="PW" placeholder="1" size="20" maxlength="50"/>
+    <!--<br/>
+	 Abilities, Spells<input type="text" name="AS" size="20" maxlength="50"/>
+    --> <br/>
+	Features, Traits <input type="text" name="FT" placeholder="Brawler" size="20" maxlength="500"/>
+    <br/>
+	 Proficiencies<input type="text" name="Prof" placeholder="+2" size="20" maxlength="50"/>
+    <br/>
+	 Weapons<input type="text" name="Weap" placeholder="Sword/Dagger/Staff..." size="20" maxlength="500"/>
+    <br/>
+	Armor <input type="text" name="Arm" placeholder="Leather,Iron,Chaimail..." size="20" maxlength="500"/>
+    <br/> 
+	Trinkets <input type="text" name="Trinkets" placeholder="1" size="20
+    " maxlength="500"/>
+    <br/>
+	</p>	
+  <p>
+    <input type="submit" value="Submit Entry"/>
+    </p>
+			</form>
+		</div>
+	</body>
+</html>
