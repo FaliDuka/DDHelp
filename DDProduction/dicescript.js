@@ -8,14 +8,14 @@ function rollD4() {
 }
 
 // Roll a D6
-function rollD6() {
+function rollD6 {
   let d6Result = document.getElementById("d6");
   let d6 = Math.floor(Math.random() * 6 * multiplier.value) + 1;
   document.getElementById("results").innerHTML = d6;
 }
 
 // Roll a D8
-function rollD8() {
+function rollD8) {
   let d8Result = document.getElementById("d8");
   let d8 = Math.floor(Math.random() * 8 * multiplier.value) + 1;
   document.getElementById("results").innerHTML = d8;
